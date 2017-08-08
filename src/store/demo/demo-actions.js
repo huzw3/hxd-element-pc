@@ -8,4 +8,5 @@ const actions = {
         commit(types.OFFER, params);
     },
 }
-module.exports = actions
+
+export default actions;

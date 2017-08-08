@@ -1,7 +1,7 @@
 var path = require('path')
 var webpack = require('webpack')
 
-module.exports = {
+let config ={
   entry: './src/main.js',
   output: {
     path: path.resolve(__dirname, './dist'),
@@ -70,3 +70,5 @@ if (process.env.NODE_ENV === 'production') {
     })
   ])
 }
+
+module.exports = config;

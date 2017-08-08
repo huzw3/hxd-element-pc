@@ -15,11 +15,12 @@
     import  Demo from './demo.vue'
 
     import {mapGetters, mapActions} from 'vuex'
-    import {setOffer,setShopPage} from '../../store/demo/demo-actions'
+    import store from '../../store/demo/demo-store-index'
 
     Vue.component(Button.name, Button);
 
     export default {
+        store,
         data () {
             return {
                 msg: 'Welcome to Your Vue.js App'
@@ -30,7 +31,7 @@
         },
         methods: {
             ...mapActions([
-                setShopPage, setOffer
+                'setShopPage', 'setOffer'
             ]),
             routeTo () {
                 var offerInst = {};
