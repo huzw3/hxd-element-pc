@@ -1,21 +1,28 @@
 <template>
-    <div>
-        info.vue
+    <div >
+        <el-button @click="startHacking">默认按钮</el-button>
+        <!--<span>{{getOffer}}</span>-->
+        <span>{{this.$store.state.demoState.offer}}</span>
     </div>
 </template>
 
 <script>
-    import store from '../../store/demoStore'
+    import store from '../../store/demo/demo-store-index'
+    import { mapGetters } from 'vuex'
 
     export default {
+        store,
         data () {
             return {
                 msg: 'Welcome to Your Vue.js App'
             }
         },
         methods: {
+            ...mapGetters([
+                'getOffer','getHomePage'
+            ]),
             startHacking () {
-                this.$toast(JSON.stringify(123))
+                alert(JSON.stringify(this.$store.state.demoState.offer))
             }
         }
     }
