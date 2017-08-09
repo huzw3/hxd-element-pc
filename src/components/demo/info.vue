@@ -1,8 +1,14 @@
 <template>
     <div >
-        <el-button @click="startHacking">默认按钮</el-button>
-        <!--<span>{{getOffer}}</span>-->
-        <span>{{this.$store.state.demoState.offer}}</span>
+        <div>
+            <el-button @click="startHacking">默认按钮</el-button>
+        </div>
+        <div>
+            <span>使用this.$store方式取值：</span>  <span>{{this.$store.state.demoState.offer}}</span>
+        </div>
+        <div>
+            <span>使用mapGetters方式取值：</span>  <span>{{this.offer}}</span>
+        </div>
     </div>
 </template>
 
@@ -17,12 +23,15 @@
                 msg: 'Welcome to Your Vue.js App'
             }
         },
+        computed: {
+            ...mapGetters({
+                offer:'getOffer',
+                homePage:'getHomePage'
+            })
+        },
         methods: {
-            ...mapGetters([
-                'getOffer','getHomePage'
-            ]),
             startHacking () {
-                alert(JSON.stringify(this.$store.state.demoState.offer))
+                alert(JSON.stringify(this.offer))
             }
         }
     }
