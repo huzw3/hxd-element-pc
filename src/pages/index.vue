@@ -5,7 +5,7 @@
         <el-row style="padding-top: 63px">
             <el-carousel type="card">
                 <el-carousel-item>
-                    <img src="../assets/logo.png" style="width: 100%">
+                    <img @click="routeTo(1)" src="../assets/logo.png" style="width: 100%">
                 </el-carousel-item>
                 <el-carousel-item>
                     <img src="../assets/logo.png" style="width: 100%">
@@ -45,7 +45,9 @@
         },
 
         methods: {
-
+            routeTo(pageId){
+                this.$router.push({path: '/catalog',query: { value: pageId }});
+            }
         }
     }
 </script>
