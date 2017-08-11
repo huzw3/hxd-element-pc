@@ -3,7 +3,7 @@
         <div class="top-header">
             <el-row>
                 <el-col :span="6">
-                    <img src="../assets/logo.png" style="height: 50px;float:right;padding-top: 5px"/>
+                    <img src="../assets/logo.png" style="height: 50px;float:right;padding-top: 5px;" @click="routeToHome"/>
                 </el-col>
                 <el-col :span="12">
                     <el-menu style="background-color: white" :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect">
@@ -87,6 +87,9 @@
         },
 
         methods: {
+            routeToHome(){
+                this.$router.push({path: '/homePage'});
+            },
             handleSelect(key, keyPath) {
                 console.log(key, keyPath);
             },

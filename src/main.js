@@ -8,7 +8,7 @@ Vue.use(VueRouter);
 const router = new VueRouter({
   routes:[
     { path: '/', redirect: '/homePage' },
-    { path: '/homePage', component: resolve => require(['./pages/index.vue'], resolve)},
+    { path: '/homePage', component: resolve => require(['./pages/homePage.vue'], resolve)},
     { path: '/catalog', component: resolve => require(['./pages/catalog.vue'], resolve)},
 
     { path: '/demoPage', component: resolve => require(['./components/demo/demoPage.vue'], resolve)},

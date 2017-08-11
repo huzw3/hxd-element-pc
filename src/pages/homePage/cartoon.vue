@@ -22,7 +22,7 @@
                     <el-row>
                         <el-col :span="4" v-for="i in 12" style="padding: 0px 10px 10px 10px">
                             <el-card :body-style="{ padding: '5px' }">
-                                <img src="../../assets/logo.png" style="width: 100%">
+                                <img src="../../assets/logo.png" style="width: 100%" @click="routeTo(i)">
                                 <el-row>
                                     <span>更新至：第{{i}}话</span>
                                 </el-row>
@@ -78,7 +78,9 @@
         },
 
         methods: {
-
+            routeTo(pageId){
+                this.$router.push({path: '/catalog',query: { value: pageId }});
+            }
         }
     }
 </script>
