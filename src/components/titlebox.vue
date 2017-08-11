@@ -1,5 +1,5 @@
 <template>
-    <li class="hxd_titlebox">
+    <li class="hxd_titlebox" @click="routeTo(1)">
         <span>第x话 该话标题</span>
     </li>
 </template>
@@ -16,7 +16,9 @@
         },
 
         methods: {
-
+            routeTo:function(pageId){
+                this.$router.push({path: '/cartoonPage',query: { value: pageId }});
+            }
         },
     }
 </script>

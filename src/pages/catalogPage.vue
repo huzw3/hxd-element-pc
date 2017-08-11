@@ -3,10 +3,10 @@
         <el-row>
             <el-carousel indicator-position="outside">
                 <el-carousel-item>
-                    <img src="../assets/logo.png">
+                    <img src="../assets/logo.png" style="cursor: pointer;">
                 </el-carousel-item>
                 <el-carousel-item>
-                    <img src="../assets/logo.png">
+                    <img src="../assets/logo.png" style="cursor: pointer;">
                 </el-carousel-item>
             </el-carousel>
         </el-row>

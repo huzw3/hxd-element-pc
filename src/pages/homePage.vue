@@ -22,7 +22,7 @@
 </template>
 
 <script>
-    import  cartoonModule from './homePage/cartoon.vue'
+    import  cartoonModule from './homePage/cartoonList.vue'
     import  shopModule from './homePage/shop.vue'
 
 
@@ -39,7 +39,7 @@
 
         methods: {
             routeTo(pageId){
-                this.$router.push({path: '/catalog',query: { value: pageId }});
+                this.$router.push({path: '/catalogPage',query: { value: pageId }});
             }
         }
     }

@@ -26,7 +26,7 @@
                     <el-row>
                         <el-col :span="6" v-for="i in 8" style="padding: 0px 10px 10px 10px">
                             <el-card :body-style="{ padding: '5px' }">
-                                <img src="../../assets/logo.png" style="width: 100%">
+                                <img src="../../assets/logo.png" style="width: 100%;cursor: pointer;">
                                 <el-row>
                                     <el-col :span="14">
                                         <span>商品名称{{i}}</span>

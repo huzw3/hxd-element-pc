@@ -20,7 +20,7 @@
                     </el-row>
 
                     <el-row>
-                        <el-col :span="4" v-for="i in 12" style="padding: 0px 10px 10px 10px">
+                        <el-col :span="4" v-for="i in 12" style="padding: 0px 10px 10px 10px;cursor: pointer;">
                             <el-card :body-style="{ padding: '5px' }">
                                 <img src="../../assets/logo.png" style="width: 100%" @click="routeTo(i)">
                                 <el-row>
@@ -79,7 +79,7 @@
 
         methods: {
             routeTo(pageId){
-                this.$router.push({path: '/catalog',query: { value: pageId }});
+                this.$router.push({path: '/catalogPage',query: { value: pageId }});
             }
         }
     }

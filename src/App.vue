@@ -21,9 +21,6 @@
     text-align: center;
     vertical-align: middle;
   }
-  img {
-    cursor: pointer;
-  }
 </style>
 
 
