@@ -1,6 +1,5 @@
 <template>
     <div style="padding-top: 65px">
-
         <el-row>
             <el-col :span="18">
                 <el-row style="padding: 20px">
@@ -9,7 +8,7 @@
                     </li>
                 </el-row>
                 <el-row v-for="i in 4" style="padding-left: 20px">
-                    <img src="../assets/0001.jpg" style="width: 100%">
+                    <img src="../assets/logo.png" style="width: 100%">
                 </el-row>
             </el-col>
             <el-col :span="6">
@@ -20,7 +19,7 @@
                         </el-row>
                         <el-row>
                             <el-card :body-style="{ padding: '5px' }">
-                                <el-row v-for="i in 10" style="padding-bottom: 5px">
+                                <el-row v-for="i in 9" style="padding-bottom: 5px">
                                     <span style="color: #20a0ff;font-size: small">用户名 : </span>
                                     <span style="font-size: small;">一拳超人 第 120 话 无限连招 第啊120话 无限连招 一拳超人 </span>
                                 </el-row>
@@ -33,14 +32,20 @@
                                 </el-row>
                             </el-card>
                         </el-row>
-
-
-
+                        <el-row style="position:absolute;padding-top: 10px">
+                            <el-col :span="18">
+                                <el-input></el-input>
+                            </el-col>
+                            <el-col :span="6">
+                                <div style="padding-left: 2px">
+                                    <el-button>评论</el-button>
+                                </div>
+                            </el-col>
+                        </el-row>
                     </el-card>
                 </el-row>
             </el-col>
         </el-row>
-
     </div>
 </template>
 
@@ -82,4 +87,6 @@
         width:20%;
         height:80%;
     }
+
+
 </style>

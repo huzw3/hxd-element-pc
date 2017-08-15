@@ -25,8 +25,8 @@
 
                     <el-row>
                         <el-col :span="6" v-for="i in 8" style="padding: 0px 10px 10px 10px">
-                            <el-card :body-style="{ padding: '5px' }">
-                                <img src="../../assets/logo.png" style="width: 100%;cursor: pointer;">
+                            <el-card :body-style="{ padding: '5px' }" style="cursor: pointer;" @click.native="routeTo(i)">
+                                <img src="../../assets/logo.png" style="width: 100%;"  >
                                 <el-row>
                                     <el-col :span="14">
                                         <span>商品名称{{i}}</span>
@@ -38,6 +38,14 @@
                             </el-card>
                         </el-col>
                     </el-row>
+
+                    <el-row style="text-align: center">
+                        <el-pagination
+                                small
+                                layout="prev, pager, next"
+                                :total="50">
+                        </el-pagination>
+                    </el-row>
                 </el-col>
                 <!-- 右边栏-->
                 <el-col :span="6">
@@ -47,7 +55,7 @@
 
                     <el-row>
                         <el-col :span="24" v-for="i in 5" style="padding: 0px 3px 3px 3px">
-                            <el-card :body-style="{ padding: '3px' }">
+                            <el-card :body-style="{ padding: '3px' }" style="cursor: pointer;" @click.native="routeTo(i)">
                                 <el-row>
                                     <el-col :span="8">
                                         <img src="../../assets/logo.png" style="width: 80%">
@@ -86,7 +94,9 @@
         },
 
         methods: {
-
+            routeTo(pageId){
+                window.open("https://www.baidu.com")
+            }
         }
     }
 </script>
