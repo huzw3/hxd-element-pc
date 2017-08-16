@@ -1,11 +1,12 @@
 <template>
     <li class="hxd_titlebox" @click="routeTo(1)">
-        <span>第x话 该话标题</span>
+        <span>第{{clauseId}}话 该话标题</span>
     </li>
 </template>
 
 <script>
     export default {
+        props: ['clauseId'],
         components:{
 
         },

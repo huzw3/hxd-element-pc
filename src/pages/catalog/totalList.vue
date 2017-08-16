@@ -5,7 +5,7 @@
                 <el-tab-pane label="正篇" name="first">
                     <el-row>
                         <el-col v-for="i in 60" :span="4" style="padding-bottom: 10px">
-                            <hxd-titlebox></hxd-titlebox>
+                            <hxd-titlebox :clauseId = i></hxd-titlebox>
                         </el-col>
                     </el-row>
                     <el-row class="hxd-page">
@@ -15,7 +15,7 @@
                 <el-tab-pane label="番外篇" name="second">
                     <el-row>
                         <el-col v-for="i in 30" :span="4" style="padding-bottom: 10px">
-                            <hxd-titlebox></hxd-titlebox>
+                            <hxd-titlebox :clauseId = i></hxd-titlebox>
                         </el-col>
                     </el-row>
                     <el-row class="hxd-page">

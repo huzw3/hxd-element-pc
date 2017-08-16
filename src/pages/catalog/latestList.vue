@@ -5,7 +5,7 @@
                 <el-tab-pane label="最近更新" name="first">
                     <el-row>
                         <el-col v-for="i in 6" :span="4" style="padding-bottom: 10px">
-                            <hxd-titlebox class="hxd_titleboxRed"></hxd-titlebox>
+                            <hxd-titlebox :clauseId = i class="hxd_titleboxRed"></hxd-titlebox>
                         </el-col>
                     </el-row>
                 </el-tab-pane>
