@@ -39,6 +39,16 @@ let config ={
       }
     ]
   },
+  plugins: [
+    new webpack.ProvidePlugin({
+      common: path.resolve(
+          __dirname, "src/common/common.js"
+      ),
+      $: path.resolve(
+          __dirname, "src/common/jquery-3.2.1.min.js"
+      )
+    })
+  ],
   resolve: {
     alias: {
       'vue$': 'vue/dist/vue'

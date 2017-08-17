@@ -17,7 +17,7 @@
                             <el-menu-item index="2-2">选项2</el-menu-item>
                             <el-menu-item index="2-3">选项3</el-menu-item>
                         </el-submenu>
-                        <el-menu-item index="6">加入我们</el-menu-item>
+                        <el-menu-item @click.native="useAjax()" index="6">加入我们</el-menu-item>
                     </el-menu>
                 </el-col>
                 <el-col :span="6">
@@ -106,6 +106,15 @@
                     type: 'success',
                     message: '恭喜你，登陆成功'
                 });
+            },
+            useAjax(){
+                var req = {"hello":123};
+                var self = this;
+                common.hxdAjax("message/order",req,this,function (result) {
+                    self.$alert('返回信息：'+JSON.stringify(result), '成功', {
+                        confirmButtonText: '确定'
+                    });
+                })
             }
         }
     }
